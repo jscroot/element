@@ -1,7 +1,7 @@
-function getValue(id){
+export function getValue(id){
     return document.getElementById(id).value;;
 }
 
-function setInner(id,content){
+export function setInner(id,content){
     document.getElementById(id).innerHTML = content;
 }
