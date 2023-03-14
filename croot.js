@@ -13,7 +13,7 @@ export function addInner(id,content){
 export function addChild(id,tag,classvalue,content){
     let el = document.createElement(tag);
     let classArray = classvalue.split(" ");
-    classArray.forEach(setClassValue.bind(null,el));
+    classArray.forEach(setClassValue.bind(setClassValue,el));
     el.innerHTML = content;
     document.getElementById(id).appendChild(el);
 }
