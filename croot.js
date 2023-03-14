@@ -19,7 +19,7 @@ export function addChild(id,tag,classvalue,content){
 }
 
 function setClassValue(classvalue,el){
-    el.classList.add(classvalue);
+    el.classList.add(classvalue.trim());
 }
 
 export function show(id){
