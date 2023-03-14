@@ -10,6 +10,18 @@ export function addInner(id,content){
     document.getElementById(id).innerHTML += content;
 }
 
+export function addChild(id,tag,classvalue,content){
+    let el = document.createElement(tag);
+    let classArray = classvalue.split(" ");
+    classArray.forEach(setClassValue.bind(null,el));
+    el.innerHTML = content;
+    document.getElementById(id).appendChild(el);
+}
+
+function setClassValue(classvalue,el){
+    el.classList.add(classvalue);
+}
+
 export function show(id){
     document.getElementById(id).style.display = 'block';
 }
