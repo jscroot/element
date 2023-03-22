@@ -1,3 +1,11 @@
+export function textFocus(id){
+    document.getElementById(id).focus();
+}
+
+export function textBlur(id){
+    document.getElementById(id).blur();
+}
+
 export function getValue(id){
     return document.getElementById(id).value;
 }
