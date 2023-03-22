@@ -1,3 +1,7 @@
+export function container(id){
+    return document.getElementById(id);
+}
+
 export function textFocus(id){
     document.getElementById(id).focus();
 }
