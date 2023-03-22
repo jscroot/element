@@ -2,8 +2,8 @@ export function container(id){
     return document.getElementById(id);
 }
 
-export function onClick(id,functionname){
-    document.getElementById(id).onclick = functionname;
+export function onClick(id,actionfunctionname){
+    document.getElementById(id).onclick = actionfunctionname;
 }
 
 export function textFocus(id){
