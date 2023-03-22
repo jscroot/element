@@ -2,6 +2,10 @@ export function container(id){
     return document.getElementById(id);
 }
 
+export function onClick(id,functionname){
+    document.getElementById(id).onclick = functionname;
+}
+
 export function textFocus(id){
     document.getElementById(id).focus();
 }
