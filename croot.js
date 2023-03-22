@@ -18,6 +18,10 @@ export function getValue(id){
     return document.getElementById(id).value;
 }
 
+export function setValue(id,valuecontent){
+    return document.getElementById(id).value=valuecontent;
+}
+
 export function setInner(id,content){
     document.getElementById(id).innerHTML = content;
 }
