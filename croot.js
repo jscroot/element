@@ -6,6 +6,10 @@ export function onClick(id,actionfunctionname){
     document.getElementById(id).onclick = actionfunctionname;
 }
 
+export function onChange(id,actionfunctionname){
+    document.getElementById(id).onchange = function() {actionfunctionname()};
+}
+
 export function textFocus(id){
     document.getElementById(id).focus();
 }
