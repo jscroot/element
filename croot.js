@@ -32,6 +32,7 @@ export function getValueRadio(name){
             if (radioButton.checked) {
             selectedValue = radioButton.value;
             }
+            console.log("Selected Value:", selectedValue);
         });
     });
     return selectedValue;
