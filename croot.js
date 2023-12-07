@@ -30,6 +30,10 @@ export function setInner(id,content){
     document.getElementById(id).innerHTML = content;
 }
 
+export function setInnerText(id,content){
+    document.getElementById(id).innerText = content;
+}
+
 export function addInner(id,content){
     document.getElementById(id).innerHTML += content;
 }
