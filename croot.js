@@ -22,6 +22,21 @@ export function getValue(id){
     return document.getElementById(id).value;
 }
 
+//get radio button value using by name not id
+export function getValueRadio(name){
+    const RadioButtons = document.getElementsByName(name);
+    let selectedValue;
+
+    RadioButtons.forEach(radioButton => {
+        radioButton.addEventListener("change", () => {
+            if (radioButton.checked) {
+            selectedValue = radioButton.value;
+            }
+        });
+    });
+    return selectedValue;
+}
+
 export function setValue(id,valuecontent){
     return document.getElementById(id).value=valuecontent;
 }
