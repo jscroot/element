@@ -28,12 +28,10 @@ export function getValueRadio(name){
     let selectedValue;
 
     RadioButtons.forEach(radioButton => {
-        radioButton.addEventListener("change", () => {
-            if (radioButton.checked) {
+        if (radioButton.checked) {
             selectedValue = radioButton.value;
-            }
-            console.log("Selected Value:", selectedValue);
-        });
+        }
+        console.log("Selected Value:", selectedValue);
     });
     return selectedValue;
 }
