@@ -38,6 +38,11 @@ export function getValueRadio(name){
 
 export function getValueSelect(id){
     const sel = document.getElementsByName(id);
+    return sel.options[sel.selectedIndex].value;
+}
+
+export function getTextSelect(id){
+    const sel = document.getElementsByName(id);
     return sel.options[sel.selectedIndex].text;
 }
 
