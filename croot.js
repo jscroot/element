@@ -36,6 +36,11 @@ export function getValueRadio(name){
     return selectedValue;
 }
 
+export function getValueSelect(id){
+    const sel = document.getElementsByName(id);
+    return sel.options[sel.selectedIndex].text;
+}
+
 //get file size in form input in KB
 export function getFileSize(id){
     let inputElement = document.getElementById(id);
