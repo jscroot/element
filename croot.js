@@ -10,6 +10,10 @@ export function onChange(id,actionfunctionname){
     document.getElementById(id).onchange = function() {actionfunctionname()};
 }
 
+export function onInput(id,actionfunctionname){
+    document.getElementById(id).oninput = function() {actionfunctionname()};
+}
+
 export function textFocus(id){
     document.getElementById(id).focus();
 }
