@@ -83,6 +83,10 @@ function setClassValue(el,classvalue){
     el.classList.add(classvalue.trim());
 }
 
+export function addClassValue(id, classValue){
+    document.getElementById(id).classList.add(classValue.trim());
+}
+
 export function show(id){
     document.getElementById(id).style.display = 'block';
 }
