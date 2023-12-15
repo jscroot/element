@@ -90,3 +90,7 @@ export function show(id){
 export function hide(id){
     document.getElementById(id).style.display = 'none';
 }
+
+export function renderHTML(id,urlHTML){
+    document.getElementById(id).load(urlHTML);
+}
