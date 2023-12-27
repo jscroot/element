@@ -16,8 +16,8 @@ export function onInput(id,actionfunctionname){
 
 // initial HTML document has been completely loaded and parsed,
 // without stylesheets, images, and subframes to finish loading
-export function runAfterDOM(runFunction){
-    document.addEventListener('DOMContentLoaded', function() {runFunction()});
+export function runAfterDOM(runFunctionEvent){
+    window.addEventListener('DOMContentLoaded',(event) => {runFunctionEvent(event)});
 }
 
 //This includes after-all assets like images, scripts, and CSS files loaded.
