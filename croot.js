@@ -14,6 +14,17 @@ export function onInput(id,actionfunctionname){
     document.getElementById(id).oninput = function() {actionfunctionname()};
 }
 
+// initial HTML document has been completely loaded and parsed,
+// without stylesheets, images, and subframes to finish loading
+export function runAfterDOM(runFunction){
+    document.addEventListener('DOMContentLoaded', function() {runFunction()});
+}
+
+//This includes after-all assets like images, scripts, and CSS files loaded.
+export function runAfterAll(runFunctionEvent){
+    window.addEventListener('load', (event) => {runFunctionEvent(event)});
+}
+
 export function textFocus(id){
     document.getElementById(id).focus();
 }
