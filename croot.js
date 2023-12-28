@@ -113,3 +113,15 @@ export function hide(id){
 export function renderHTML(id,urlHTML){
     document.getElementById(id).load(urlHTML);
 }
+
+export function addScriptInBody( src ) {
+    let s = document.createElement( 'script' );
+    s.setAttribute( 'src', src );
+    document.body.appendChild( s );
+}
+
+export function addScriptInHead( src ) {
+    let s = document.createElement( 'script' );
+    s.setAttribute( 'src', src );
+    document.head.appendChild( s );
+}
