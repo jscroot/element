@@ -125,3 +125,10 @@ export function addScriptInHead( src ) {
     s.setAttribute( 'src', src );
     document.head.appendChild( s );
 }
+
+export function addCSS( href ) {
+    let s = document.createElement( 'link' );
+    s.setAttribute( 'rel', 'stylesheet' );
+    s.setAttribute( 'href', href );
+    document.head.appendChild( s );
+}
