@@ -132,3 +132,10 @@ export function addCSS( href ) {
     s.setAttribute( 'href', href );
     document.head.appendChild( s );
 }
+
+export function addCSSIn( href,id ) {
+    let s = document.createElement( 'link' );
+    s.setAttribute( 'rel', 'stylesheet' );
+    s.setAttribute( 'href', href );
+    document.getElementById(id).appendChild( s );
+}
