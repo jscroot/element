@@ -110,6 +110,15 @@ export function hide(id){
     document.getElementById(id).style.display = 'none';
 }
 
+export function disableInput(id) {
+    const Input = document.getElementById(id);
+    Input.disabled = true;
+}
+export function enableInput(id) {
+    const Input = document.getElementById(id);
+    Input.disabled = false;
+}
+
 export function renderHTML(id,urlHTML){
     document.getElementById(id).load(urlHTML);
 }
