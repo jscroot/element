@@ -7,11 +7,11 @@ export function onClick(id,actionfunctionname){
 }
 
 export function onChange(id,actionfunctionname){
-    document.getElementById(id).onchange = function() {actionfunctionname()};
+    document.getElementById(id).onchange = function(event) {actionfunctionname(event.target)};
 }
 
 export function onInput(id,actionfunctionname){
-    document.getElementById(id).oninput = function() {actionfunctionname()};
+    document.getElementById(id).oninput = function(event) {actionfunctionname(event.target)};
 }
 
 // initial HTML document has been completely loaded and parsed,
