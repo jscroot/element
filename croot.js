@@ -86,16 +86,20 @@ export function addInner(id,content){
     document.getElementById(id).innerHTML += content;
 }
 
-export function addChild(id,tag,classvalue,content){
+export function addChild(id, tag, classvalue, content) {
     let el = document.createElement(tag);
-    let classArray = classvalue.split(" ");
-    classArray.forEach(setClassValue.bind(null,el));
+    if (classvalue.trim() !== "") {
+        let classArray = classvalue.split(" ");
+        classArray.forEach(setClassValue.bind(null, el));
+    }
     el.innerHTML = content;
     document.getElementById(id).appendChild(el);
 }
 
-function setClassValue(el,classvalue){
-    el.classList.add(classvalue.trim());
+export function setClassValue(el, classvalue) {
+    if (classvalue.trim() !== "") {
+        el.classList.add(classvalue.trim());
+    }
 }
 
 export function addClassValue(id, classValue){
